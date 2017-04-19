@@ -1,0 +1,1867 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/Guichaguri/DiscordDJ#readme">discord-dj (v0.0.5)</a>
+</h1>
+<h4>Discord DJ Bot. Let you play music in your server. Inspired by PlugDJ</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.discord-dj">module discord-dj</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord-dj.BotDJ">
+            function <span class="apidocSignatureSpan">discord-dj.</span>BotDJ
+            <span class="apidocSignatureSpan">(bot, voiceConnection, handler, keys)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord-dj.ChiptuneDecoder">
+            function <span class="apidocSignatureSpan">discord-dj.</span>ChiptuneDecoder
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord-dj.DJ">
+            function <span class="apidocSignatureSpan">discord-dj.</span>DJ
+            <span class="apidocSignatureSpan">(bot, voiceConnection, handler, keys)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord-dj.DJManager">
+            function <span class="apidocSignatureSpan">discord-dj.</span>DJManager
+            <span class="apidocSignatureSpan">(an object with token, email and password)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord-dj.DJMode">
+            function <span class="apidocSignatureSpan">discord-dj.</span>DJMode
+            <span class="apidocSignatureSpan">(opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord-dj.Decoder">
+            function <span class="apidocSignatureSpan">discord-dj.</span>Decoder
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord-dj.DirectoryPlaylist">
+            function <span class="apidocSignatureSpan">discord-dj.</span>DirectoryPlaylist
+            <span class="apidocSignatureSpan">(folder)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord-dj.FFmpegDecoder">
+            function <span class="apidocSignatureSpan">discord-dj.</span>FFmpegDecoder
+            <span class="apidocSignatureSpan">(decoderCmd)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord-dj.FileAudio">
+            function <span class="apidocSignatureSpan">discord-dj.</span>FileAudio
+            <span class="apidocSignatureSpan">(file, user, title)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord-dj.FilePlaylist">
+            function <span class="apidocSignatureSpan">discord-dj.</span>FilePlaylist
+            <span class="apidocSignatureSpan">(filePath)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord-dj.IcyAudio">
+            function <span class="apidocSignatureSpan">discord-dj.</span>IcyAudio
+            <span class="apidocSignatureSpan">(url, user)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord-dj.Mode">
+            function <span class="apidocSignatureSpan">discord-dj.</span>Mode
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord-dj.Playable">
+            function <span class="apidocSignatureSpan">discord-dj.</span>Playable
+            <span class="apidocSignatureSpan">(user)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord-dj.Playlist">
+            function <span class="apidocSignatureSpan">discord-dj.</span>Playlist
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord-dj.PlaylistMode">
+            function <span class="apidocSignatureSpan">discord-dj.</span>PlaylistMode
+            <span class="apidocSignatureSpan">(playlist)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord-dj.SoundcloudAudio">
+            function <span class="apidocSignatureSpan">discord-dj.</span>SoundcloudAudio
+            <span class="apidocSignatureSpan">(url, key, user)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord-dj.SoundcloudPlaylist">
+            function <span class="apidocSignatureSpan">discord-dj.</span>SoundcloudPlaylist
+            <span class="apidocSignatureSpan">(url, key)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord-dj.StreamAudio">
+            function <span class="apidocSignatureSpan">discord-dj.</span>StreamAudio
+            <span class="apidocSignatureSpan">(url, user, title)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord-dj.YoutubePlaylist">
+            function <span class="apidocSignatureSpan">discord-dj.</span>YoutubePlaylist
+            <span class="apidocSignatureSpan">(url, key)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord-dj.YoutubeVideo">
+            function <span class="apidocSignatureSpan">discord-dj.</span>YoutubeVideo
+            <span class="apidocSignatureSpan">(video, user)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord-dj.getDecoders">
+            function <span class="apidocSignatureSpan">discord-dj.</span>getDecoders
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord-dj.registerDecoder">
+            function <span class="apidocSignatureSpan">discord-dj.</span>registerDecoder
+            <span class="apidocSignatureSpan">(decoder)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">discord-dj.</span>Special</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.discord-dj.Special">module discord-dj.Special</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord-dj.Special.checkUpdate">
+            function <span class="apidocSignatureSpan">discord-dj.Special.</span>checkUpdate
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord-dj.Special.registerCommands">
+            function <span class="apidocSignatureSpan">discord-dj.Special.</span>registerCommands
+            <span class="apidocSignatureSpan">(handler)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.discord-dj" id="apidoc.module.discord-dj">module discord-dj</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.discord-dj.BotDJ" id="apidoc.element.discord-dj.BotDJ">
+        function <span class="apidocSignatureSpan">discord-dj.</span>BotDJ
+        <span class="apidocSignatureSpan">(bot, voiceConnection, handler, keys)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class BotDJ extends DJ {
+
+    constructor(bot, voiceConnection, handler, keys) {
+        super(bot, voiceConnection, handler, keys);
+        this._mode = null;
+        this.rating = null;
+        this.info = null;
+
+        this.on('skip', function() {
+            if(this.rating != null) this.rating.resetRating();
+            if(this.mode != null) this.mode.onSkip();
+        }.bind(this));
+    }
+
+    get mode() {
+        return this._mode;
+    }
+
+    set mode(mode) {
+        if(this._mode != null) this._mode.destroy();
+        this._mode = mode;
+        if(mode != null) mode.init(this);
+    }
+
+    enableRating(options) {
+        this.rating = new Rating(this.bot, this, options);
+    }
+
+    disableRating() {
+        if(this.rating != null) this.rating.destroy();
+        this.rating = null;
+    }
+
+    enableInfo(options) {
+        this.info = new InfoHandler(this, this.handler, options);
+    }
+
+    disableInfo() {
+        if(this.info != null) this.info.destroy();
+        this.info = null;
+    }
+
+    destroy() {
+        if(this.info != null) this.info.destroy();
+        if(this.rating != null) this.rating.destroy();
+        if(this.mode != null) this.mode.destroy();
+    }
+
+    addToQueue(playable) {
+        var p = this.mode != null ? this.mode.addToQueue(playable) : playable;
+        if(p != null) super.addToQueue(p);
+    }
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord-dj.ChiptuneDecoder" id="apidoc.element.discord-dj.ChiptuneDecoder">
+        function <span class="apidocSignatureSpan">discord-dj.</span>ChiptuneDecoder
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class ChiptuneDecoder extends Decoder {
+
+    constructor() {
+        super();
+        this.instance = null;
+    }
+
+
+    canDecode(format) {
+        return formats.indexOf(format) != -1;
+    }
+
+    createDecoder(stream, options) {
+        return new Promise(function(resolve, reject) {
+            if(chiptune == null) {
+                chiptune = require('node-chiptune'); // Only require when needed. Less memory usage.
+            }
+            this.instance = chiptune({
+                sampleRate: options.sampleRate,
+                channels: options.channels,
+                readSize: 2880
+            });
+            stream.pipe(this.instance);
+
+            this.instance.once('readable', function() {
+                resolve(this.instance);
+            }.bind(this));
+        }.bind(this));
+    }
+
+    destroyDecoder() {
+        this.instance.destroy();
+    }
+
+    getTitle() {
+        if(this.instance == null) return null;
+        var md = this.instance.metadata;
+        return md.title + ' - ' + md.artist;
+    }
+
+    getAdditionalInfo() {
+        if(this.instance == null) return null;
+        return this.instance.metadata.message;
+    }
+
+    getPriority() {
+        return 50;
+    }
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+function initDecoders() {
+if(!Utils.exists(config['decoder-path'])) {
+    Utils.registerDecoder(new DiscordDJ.FFmpegDecoder(null));
+} else {
+    Utils.registerDecoder(new DiscordDJ.FFmpegDecoder(config['decoder-path']));
+}
+Utils.registerDecoder(new DiscordDJ.<span class="apidocCodeKeywordSpan">ChiptuneDecoder</span>());
+}
+
+function connect() {
+var credentials = {}, hasCredentials = false;
+
+if(Utils.exists(config['token'])) {
+    credentials['token'] = config['token'];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord-dj.DJ" id="apidoc.element.discord-dj.DJ">
+        function <span class="apidocSignatureSpan">discord-dj.</span>DJ
+        <span class="apidocSignatureSpan">(bot, voiceConnection, handler, keys)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class DJ extends EventEmitter {
+
+    constructor(bot, voiceConnection, handler, keys) {
+        super();
+
+        this.dj = new InternalDJ(bot, voiceConnection, this, handler, keys);
+    }
+
+    destroy() {
+
+    }
+
+    play(playable) {
+        this.dj.play(playable);
+    }
+
+    skip() {
+        this.dj.skip();
+    }
+
+    addToQueue(playable) {
+        this.dj.addToQueue(playable);
+    }
+
+    get nowPlaying() {
+        return this.dj.playable;
+    }
+
+    get playable() {
+        return this.dj.playable;
+    }
+
+    get bot() {
+        return this.dj.bot;
+    }
+
+    get voiceConnection() {
+        return this.dj.voiceConnection;
+    }
+
+    get handler() {
+        return this.dj.handler;
+    }
+
+    get multithreaded() {
+        return this.dj.multithreaded;
+    }
+
+    set multithreaded(b) {
+        this.dj.multithreaded = b;
+    }
+
+    set encoderCommand(cmd) {
+        this.dj.decoderCmd = cmd;
+    }
+
+    get keys() {
+        return this.dj.keys;
+    }
+
+    set bitrate(bitrate) {
+        this.dj.bitrate = bitrate;
+    }
+
+    get bitrate() {
+        return this.dj.bitrate;
+    }
+
+    get queue() {
+        return this.dj.musicQueue;
+    }
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord-dj.DJManager" id="apidoc.element.discord-dj.DJManager">
+        function <span class="apidocSignatureSpan">discord-dj.</span>DJManager
+        <span class="apidocSignatureSpan">(an object with token, email and password)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class DJManager {
+
+    /**
+     * DJManager constructor
+     * @param credentials The credentials (an object with token, email and password) or a Discordie bot instance
+     */
+    constructor(credentials) {
+        if(credentials instanceof Discordie) {
+            this.credentials = null;
+            this.bot = credentials;
+            this.ready = true;
+        } else {
+            this.credentials = credentials;
+            this.bot = null;
+            this.ready = false;
+        }
+
+        this.handler = null;
+        this.djs = [];
+
+        this.keys = {
+            youtube: null,
+            soundcloud: null
+        };
+    }
+
+    /**
+     * This will login using the credentials.
+     * The execution of this method is not required
+     * @param callback The callback fired when the login is successfully made. Optional
+     */
+    login(callback) {
+        if(this.bot == null &amp;&amp; this.credentials != null) {
+            this.bot = new Discordie();
+            this.bot.connect(this.credentials, true);
+            this.credentials = null;
+        }
+
+        if(this.ready) {
+            callback();
+            return;
+        }
+
+        this.bot.Dispatcher.once(Discordie.Events.GATEWAY_READY, function(e) {
+            this.ready = true;
+            if(callback !== undefined) callback();
+        }.bind(this));
+    }
+
+    /**
+     * This will create a new DJ
+     * @param voiceChannel The voice channel name/id or a Discordie voice channel instance
+     * @param type The class of the DJ. Optional
+     * @return Promise
+     */
+    create(voiceChannel, type) {
+        if(voiceChannel == null) throw new Error('The voice channel can not be null');
+        if(type === undefined) type = DJ;
+
+        if(this.handler == null) {
+            this.handler = createHandler(this.bot, this);
+            this.handler.register();
+        }
+
+        return new Promise(function(resolve, reject) {
+
+            if (this.bot == null || !this.ready) {
+                this.login(function() {
+                    this.create(voiceChannel, type).then(resolve, reject);
+                }.bind(this));
+            } else {
+
+                if(voiceChannel instanceof String || typeof voiceChannel == 'string') {
+                    voiceChannel = this.getVoiceChannel(voiceChannel, true, true);
+                } else if(voiceChannel.join === undefined) {
+                    if (voiceChannel.id !== undefined) {
+                        voiceChannel = this.getVoiceChannel(voiceChannel.id, true, false);
+                    } else {
+                        return reject('Invalid Voice Channel');
+                    }
+                }
+                if(voiceChannel == null) return reject('The voice channel was not found');
+
+                voiceChannel.join(false, false).then(function(info) {
+                    var dj = new type(this.bot, info.voiceConnection, this.handler, this.keys);
+                    this.djs.push(dj);
+                    resolve(dj);
+                }.bind(this), reject);
+            }
+
+        }.bind(this));
+    }
+
+    /**
+     * Gets the DJ based on a user server/channel
+     * @param user The user object
+     * @return DJ
+     */
+    getFromUser(user) {
+        var guild = user.guild_id !== undefined ? user.guild : null;
+        var vc = guild != null ? user.getVoiceChannel(guild) : null;
+
+        if(guild != null &amp;&amp; vc == null) {
+            return null;
+        }
+
+        for(var i = 0; i &lt; this.djs.length; i++) {
+            var dj = this.djs[i];
+
+            if(dj.voiceConnection === undefined) continue;
+            var channel = dj.voiceConnection.channel;
+            if(guild != null) {
+                if(vc == channel) return dj;
+            } else {
+                if(dj.voiceConnection == null) continue;
+                guild = dj.voiceConnection.guild;
+                if(guild == null) continue;
+                vc = user.getVoiceChannel(guild);
+                if(vc != null &amp;&amp; vc == channel) return dj; ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+bot.User.setStatus(null, {name: "Music"});
+
+if(config['token'] != bot.token) configModified = true;
+config['token'] = bot.token;
+
+if(!Utils.exists(config['djs'])) return install(false, finishInstallation);
+
+var manager = new DiscordDJ.<span class="apidocCodeKeywordSpan">DJManager</span>(bot);
+
+if(!Utils.exists(config['keys'])) {
+    config['keys'] = {
+        'youtube': '',
+        'soundcloud': ''
+    };
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord-dj.DJMode" id="apidoc.element.discord-dj.DJMode">
+        function <span class="apidocSignatureSpan">discord-dj.</span>DJMode
+        <span class="apidocSignatureSpan">(opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class DJMode extends Mode {
+
+    constructor(opt) {
+        super();
+        this.opt = opt;
+        this.waitlist = null;
+    }
+
+    init(dj) {
+        super.init(dj);
+        this.waitlist = new WaitList(dj.bot, dj, dj.handler, this.opt['limit'] || 50, this.opt['dj-role'], this.opt['list-role']);
+
+        dj.handler.registerCommand('join', ['join', 'join-waitlist', 'join-wl'], joinCmd, null);
+
+        dj.handler.setCommandPermission('add', null);
+        dj.handler.setCommandPermission('youtube', null);
+        dj.handler.setCommandPermission('soundcloud', null);
+        dj.handler.setCommandPermission('raw-pm', null);
+    }
+
+    addToQueue(playable) {
+        if(this.waitlist == null) return playable;
+        if(playable == null) return null;
+        if(playable.user == null) return playable;
+        if(this.bot.playable != null &amp;&amp; this.bot.playable.user == playable.user) {
+            this.bot.handler.sendPrivateMessage(playable.user, "You are the DJ, you can't change your track now");
+            return null;
+        }
+        var r = this.waitlist.push(playable.user, playable, false);
+        if(r == -2) {
+            this.bot.handler.sendPrivateMessage(playable.user, "The wait list is full");
+            return null;
+        } else if(r == -1) {
+            this.waitlist.setPlayable(playable.user, playable);
+            this.bot.handler.sendPrivateMessage(playable.user, "Your song was successfully changed");
+        } else if(r == -3) {
+            this.bot.handler.sendPrivateMessage(playable.user, "The wait list is locked");
+        } else {
+            this.bot.handler.sendPrivateMessage(playable.user, "You were added to the wait list and your track was set");
+        }
+        if(this.bot.playable == null) {
+            this.waitlist.processDJList();
+        }
+        return null;
+    }
+
+    getAdditionalInfo() {
+        var msg = "";
+        var waitlistNotEmpty = this.waitlist.length &gt; 0;
+        if(waitlistNotEmpty) msg += "**Wait List**\n";
+        var i = 1;
+        this.waitlist.forEach(function(entry) {
+            msg += i + ". " + entry.user.mention() + "\n";
+            i++;
+        });
+        if(waitlistNotEmpty) msg += "\n";
+        if(this.waitlist.isFull()) {
+            msg += "**The Wait List is full**";
+        } else {
+            msg += "Join the Wait List with `add [youtube video url]`";
+        }
+        return msg;
+    }
+
+    onSkip() {
+        this.waitlist.processDJList();
+    }
+
+    destroy() {
+        this.waitlist.destroy();
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+
+    if(listRole != null &amp;&amp; listRole.id == djCfg['mode']['waitlist']['list-role']) {
+        djCfg['mode']['waitlist']['list-role'] = listRole.id;
+        configModified = true;
+    }
+
+    mode = new DiscordDJ.<span class="apidocCodeKeywordSpan">DJMode</span>({
+        'limit': djCfg['mode']['waitlist']['limit'],
+        'dj-role': djRole,
+        'list-role': listRole
+    });
+} else if(djCfg['mode']['type'] == 'playlist') {
+    if(!Utils.exists(djCfg['mode']['playlists'])) {
+        djCfg['mode']['playlists'] = [];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord-dj.Decoder" id="apidoc.element.discord-dj.Decoder">
+        function <span class="apidocSignatureSpan">discord-dj.</span>Decoder
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Decoder extends EventEmitter {
+
+    constructor() {
+        super();
+    }
+
+    canDecode(format) {
+        return false;
+    }
+
+    createDecoder(stream, options) {
+        return Promise.reject('Invalid decoder');
+    }
+
+    destroyDecoder() {
+
+    }
+
+    getPriority() {
+        return 1000;
+    }
+
+    getTitle() {
+
+    }
+
+    getAdditionalInfo() {
+
+    }
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord-dj.DirectoryPlaylist" id="apidoc.element.discord-dj.DirectoryPlaylist">
+        function <span class="apidocSignatureSpan">discord-dj.</span>DirectoryPlaylist
+        <span class="apidocSignatureSpan">(folder)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class DirectoryPlaylist extends Playlist {
+
+    constructor(folder) {
+        super();
+        this.lastIndex = -1;
+        this.songList = [];
+        var files = fs.readdirSync(folder);
+        for(var f in files) {
+            var filename = files[f];
+            if(audioExt.indexOf(filename.substring(filename.lastIndexOf('.') + 1)) == -1) {
+                continue;
+            }
+            this.songList.push(path.join(folder, filename));
+        }
+    }
+
+    shuffle() {
+        this.shuffleArray(this.songList);
+    }
+
+    getNextSong() {
+        if(this.songList.length == 0) return null;
+        this.lastIndex++;
+        if(this.lastIndex &gt;= this.songList.length) {
+            this.lastIndex = 0;
+        }
+        return new FileAudio(this.songList[this.lastIndex]);
+    }
+
+    hasNextSong() {
+        return this.lastIndex &lt; this.songList.length;
+    }
+
+    getLength() {
+        return this.songList.length;
+    }
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord-dj.FFmpegDecoder" id="apidoc.element.discord-dj.FFmpegDecoder">
+        function <span class="apidocSignatureSpan">discord-dj.</span>FFmpegDecoder
+        <span class="apidocSignatureSpan">(decoderCmd)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class FFmpegDecoder extends Decoder {
+
+    constructor(decoderCmd) {
+        super();
+        this.process = null;
+        this.stream = null;
+        this.decoderCmd = decoderCmd;
+        this.cmdCache = null;
+    }
+
+    canDecode(format) {
+        // The list is so big that returning true and setting a low priority is better and faster (stronger?)
+        return true;
+    }
+
+    getCommand() {
+        if(this.cmdCache != null) return this.cmdCache;
+
+        var cmds = ["avconv", "ffmpeg", "avconv.exe", "ffmpeg.exe"];
+        if(this.decoderCmd != null) {
+            cmds.unshift(this.decoderCmd);
+        } else {
+            cmds.unshift(process.cwd() + '/ffmpeg/ffmpeg');
+            cmds.unshift(process.cwd() + '/ffmpeg/ffmpeg.exe');
+        }
+
+        for(var i = 0; i &lt; cmds.length; i++){
+            var p = child_process.spawnSync(cmds[i]);
+            if(!p.error) {
+                this.cmdCache = cmds[i];
+                return cmds[i];
+            }
+        }
+
+        return null;
+    }
+
+    createDecoder(stream, options) {
+        var command = this.getCommand();
+        if(command == null) {
+            console.log('The decoder was not found.');
+            this.kill();
+            return null;
+        }
+        this.stream = stream;
+        this.process = child_process.spawn(command, [
+            "-f", "s16le",
+            "-ar", options.sampleRate,
+            "-ac", options.channels,
+            "-af", "volume=1",
+            "pipe:1",
+            "-i", "-"
+        ]);
+        stream.pipe(this.process.stdin);
+        return Promise.resolve(this.process.stdout);
+    }
+
+    destroyDecoder() {
+        try {
+            if(this.process != null) {
+                if(this.stream != null) {
+                    this.stream.unpipe(this.process.stdin);
+                }
+                this.process.stdin.pause();
+                this.process.kill('SIGKILL');
+                this.process = null;
+            }
+            this.stream = null;
+        } catch(e) {
+
+        }
+    }
+
+    getPriority() {
+        return 500;
+    }
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+function install(shouldLogin, callback) {
+    require('./Installer.js')(bot, config, shouldLogin, callback);
+    configModified = true;
+}
+
+function initDecoders() {
+    if(!Utils.exists(config['decoder-path'])) {
+        Utils.registerDecoder(new DiscordDJ.<span class="apidocCodeKeywordSpan">FFmpegDecoder</span>(null));
+    } else {
+        Utils.registerDecoder(new DiscordDJ.FFmpegDecoder(config['decoder-path']));
+    }
+    Utils.registerDecoder(new DiscordDJ.ChiptuneDecoder());
+}
+
+function connect() {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord-dj.FileAudio" id="apidoc.element.discord-dj.FileAudio">
+        function <span class="apidocSignatureSpan">discord-dj.</span>FileAudio
+        <span class="apidocSignatureSpan">(file, user, title)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class FileAudio extends Playable {
+
+    constructor(file, user, title) {
+        super(user);
+        this.file = file;
+        this.title = title === undefined ? file : title;
+    }
+
+    getTitle() {
+        return this.title;
+    }
+
+    getFormat() {
+        return Utils.getExtension(this.file);
+    }
+
+    createStream() {
+        return new Promise(function(resolve, reject) {
+            fs.stat(this.file, function(err, stat) {
+                if(err != null) {
+                    reject(err);
+                } else if(!stat.isFile()) {
+                    reject(this.file + ' is not a file');
+                } else {
+                    resolve(fs.createReadStream(this.file));
+                }
+            }.bind(this));
+        }.bind(this));
+    }
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord-dj.FilePlaylist" id="apidoc.element.discord-dj.FilePlaylist">
+        function <span class="apidocSignatureSpan">discord-dj.</span>FilePlaylist
+        <span class="apidocSignatureSpan">(filePath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class FilePlaylist extends Playlist {
+
+    constructor(filePath) {
+        super();
+        var data = fs.readFileSync(filePath).toString();
+        var dir = path.dirname(filePath);
+        var lines = data.trim().split("\n");
+        if(lines.length == 0) {
+            throw new Error('Empty playlist file');
+        } else if(startsWith(lines[0], '[playlist]')) {
+            this.list = readPLS(lines, dir);
+        } else if(startsWith(lines[0], '#EXTM3U')) {
+            this.list = readM3U(lines, dir);
+        } else {
+            this.list = readM3U(lines, dir);
+            //throw new Error('Invalid playlist format. Only PLS and M3U are accepted');
+        }
+        this.lastIndex = -1;
+    }
+
+    shuffle() {
+        this.shuffleArray(this.list);
+    }
+
+    getNextSong() {
+        if(this.list.length == 0) return null;
+        this.lastIndex++;
+        if(this.lastIndex &gt;= this.list.length) this.lastIndex = 0;
+        return this.list[this.lastIndex];
+    }
+
+    hasNextSong() {
+        return this.lastIndex &lt; this.list.length;
+    }
+
+    getLength() {
+        return this.list.length;
+    }
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord-dj.IcyAudio" id="apidoc.element.discord-dj.IcyAudio">
+        function <span class="apidocSignatureSpan">discord-dj.</span>IcyAudio
+        <span class="apidocSignatureSpan">(url, user)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class IcyAudio extends Playable {
+
+    constructor(url, user) {
+        super(user);
+        this.url = url;
+        this.title = "";
+        this.streamUrl = null;
+    }
+
+    getTitle() {
+        return this.title;
+    }
+
+    getAdditionalInfo() {
+        return this.streamUrl;
+    }
+
+    createStream() {
+        return new Promise(function(resolve, reject) {
+            icy.get(this.url, function(res) {
+                res.on('metadata', function(metadata) {
+                    var parsed = icy.parse(metadata);
+                    this.title = parsed.StreamTitle;
+                    this.streamUrl = parsed.StreamUrl;
+                    this.emit('data-changed');
+                }.bind(this));
+                resolve(res);
+            }.bind(this)).on('error', reject);
+        }.bind(this));
+    }
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord-dj.Mode" id="apidoc.element.discord-dj.Mode">
+        function <span class="apidocSignatureSpan">discord-dj.</span>Mode
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Mode {
+
+    constructor() {
+        this.bot = null;
+        this.commands = null;
+    }
+
+    init(bot) {
+        this.bot = bot;
+    }
+
+    addToQueue(playable) {
+        return playable;
+    }
+
+    getAdditionalInfo() {
+        return null;
+    }
+
+    onSkip() {
+
+    }
+
+    destroy() {
+
+    }
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord-dj.Playable" id="apidoc.element.discord-dj.Playable">
+        function <span class="apidocSignatureSpan">discord-dj.</span>Playable
+        <span class="apidocSignatureSpan">(user)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Playable extends EventEmitter {
+
+    constructor(user) {
+        super();
+        if(typeof user == 'undefined') user = null;
+        this.user = user;
+    }
+
+    init(dj) {
+
+    }
+
+    loadData() {
+        this.emit('data-changed');
+    }
+
+    getTitle() {
+        return 'Untitled';
+    }
+
+    getAdditionalInfo() {
+        return null;
+    }
+
+    getFormat() {
+        return null;
+    }
+
+    createStream() {
+        return Promise.reject('Invalid Playable');
+    }
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord-dj.Playlist" id="apidoc.element.discord-dj.Playlist">
+        function <span class="apidocSignatureSpan">discord-dj.</span>Playlist
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Playlist extends EventEmitter {
+
+    constructor() {
+        super();
+    }
+
+    shuffle() {
+
+    }
+
+    hasNextSong() {
+        return false;
+    }
+
+    getNextSong() {
+        return null;
+    }
+
+    getLength() {
+        return 0;
+    }
+
+    shuffleArray(array) {
+        var counter = array.length, temp, index;
+        while(counter &gt; 0) {
+            index = Math.floor(Math.random() * counter);
+            counter--;
+            temp = array[counter];
+            array[counter] = array[index];
+            array[index] = temp;
+        }
+        return array;
+    }
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord-dj.PlaylistMode" id="apidoc.element.discord-dj.PlaylistMode">
+        function <span class="apidocSignatureSpan">discord-dj.</span>PlaylistMode
+        <span class="apidocSignatureSpan">(playlist)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class PlaylistMode extends Mode {
+
+    constructor(playlist) {
+        super();
+        this._playlist = null;
+        this.playlists = [];
+        if(playlist instanceof Array) {
+            this.playlists = playlist;
+            if(this.playlists.length &gt; 0) {
+                this._playlist = this.playlists.shift();
+            }
+        } else if(typeof playlist != 'undefined') {
+            this._playlist = playlist;
+        }
+    }
+
+    init(bot) {
+        super.init(bot);
+
+        bot.handler.registerCommand('playlist', ['playlist', 'pl'], playlistCmd, bot.handler.permissions.VOICE_MUTE);
+
+        if(this.playlist != null) {
+            bot.play(this.playlist.getNextSong());
+        }
+    }
+
+    onSkip() {
+        try {
+            if(this.playlist != null) {
+                if(this.playlists.length &gt; 0 &amp;&amp; (this.playlist.getLength() &lt;= 0 || !this.playlist.hasNextSong())) {
+                    var newPlaylist = this.playlists.shift();
+                    this.playlists.push(this.playlist);
+                    this.playlist = newPlaylist;
+                } else {
+                    var song = this.playlist.getNextSong();
+                    if(song != null) this.bot.play(song);
+                }
+            }
+        } catch(e) {
+            console.log(e);
+        }
+    }
+
+    addPlaylist(playlist) {
+        if(this.playlist == null) {
+            this.playlist = playlist;
+        } else if(this.playlist.getLength() &lt;= 0) {
+            this.playlists.push(this.playlist);
+            this.playlist = playlist;
+        } else {
+            this.playlists.push(playlist);
+        }
+
+        //TODO remove
+        playlist.on('error', function(err) {
+            console.log(err);
+        });
+    }
+
+    get playlist() {
+        return this._playlist;
+    }
+
+    set playlist(playlist) {
+        if(typeof playlist == 'string') {
+            playlist = createPlaylist(playlist, this.bot);
+        }
+        this._playlist = playlist;
+        if(this.bot.playable == null &amp;&amp; playlist != null) {
+            if(playlist.getLength() &lt;= 0) {
+                playlist.once('update', function() {
+                    if(playlist != this.playlist) return;
+                    var next = playlist.getNextSong();
+                    if(next != null) this.bot.play(next);
+                }.bind(this));
+            } else {
+                var next = playlist.getNextSong();
+                if(next != null) this.bot.play(next);
+            }
+        }
+    }
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        'list-role': listRole
+    });
+} else if(djCfg['mode']['type'] == 'playlist') {
+    if(!Utils.exists(djCfg['mode']['playlists'])) {
+        djCfg['mode']['playlists'] = [];
+        configModified = true;
+    }
+    mode = new DiscordDJ.<span class="apidocCodeKeywordSpan">PlaylistMode</span>(djCfg['mode']['playlists']);
+} else {
+    mode = null;
+}
+
+// Initialize DJ
+
+console.log('Initializing DJ in "' + voiceChannel.guild.name + '"');
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord-dj.SoundcloudAudio" id="apidoc.element.discord-dj.SoundcloudAudio">
+        function <span class="apidocSignatureSpan">discord-dj.</span>SoundcloudAudio
+        <span class="apidocSignatureSpan">(url, key, user)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class SoundcloudAudio extends Playable {
+
+    constructor(url, key, user) {
+        super(user);
+
+        if(!Utils.SCRegex.test(url)) {
+            throw new Error('Invalid URL');
+        }
+
+        this.url = url;
+        this.key = key;
+        this.title = url;
+        this.streamUrl = null;
+    }
+
+    init(dj) {
+        this.key = dj.keys.soundcloud;
+    }
+
+    getTitle() {
+        return this.title;
+    }
+
+    getAdditionalInfo() {
+        return this.url + " *via Soundcloud*";
+    }
+
+    loadData() {
+        https.get('https://api.soundcloud.com/resolve?url=' + encodeURIComponent(this.url) +
+            '&amp;client_id=' + encodeURIComponent(this.key), function(res) {
+            var loc = res.headers.location;
+            https.get(loc, function(ress) {
+                var result = '';
+                ress.on('data', function(chunk) {
+                    result += chunk;
+                });
+                ress.on('end', function() {
+                    var data = JSON.parse(result);
+                    this.loadResponse(data);
+                    this.emit('data-changed');
+                }.bind(this));
+            }.bind(this));
+        }.bind(this));
+    }
+
+    loadResponse(json) {
+        if(json['label_name'] != null &amp;&amp; json['label_name'] != '') {
+            this.title = json['label_name'];
+        } else {
+            this.title = json['user']['username'];
+        }
+        if(json['title'].indexOf(this.tile + ' - ') != -1) {
+            this.title += json['title'];
+        } else {
+            this.title += " - " + json['title'];
+        }
+        this.streamUrl = json['stream_url'] + "?client_id=" + encodeURIComponent(this.key);
+        this.url = json['permalink_url'];
+    }
+
+    createStream() {
+        return new Promise(function(resolve, reject) {
+            if(this.streamUrl != null) {
+                this.loadStream(this.streamUrl, resolve);
+            } else {
+                this.once('data-changed', function() {
+                    this.loadStream(this.streamUrl, resolve);
+                }.bind(this));
+                this.loadData();
+            }
+        }.bind(this));
+    }
+
+    loadStream(url, callback) {
+        https.get(url, function(res) {
+            if(typeof res.headers.location != 'undefined' &amp;&amp; res.headers.location != null) {
+                if(res.headers.location != url) {
+                    this.loadStream(res.headers.location, callback);
+                    return;
+                }
+            }
+            callback(res);
+        }.bind(this));
+    }
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord-dj.SoundcloudPlaylist" id="apidoc.element.discord-dj.SoundcloudPlaylist">
+        function <span class="apidocSignatureSpan">discord-dj.</span>SoundcloudPlaylist
+        <span class="apidocSignatureSpan">(url, key)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class SoundcloudPlaylist extends Playlist {
+
+    constructor(url, key) {
+        super();
+
+        if(!Utils.SCPlaylistRegex.test(url)) {
+            throw new Error("Invalid Playlist URL");
+        }
+
+        this.tracks = [];
+        this.lastIndex = -1;
+
+        https.get('https://api.soundcloud.com/resolve?url=' + encodeURIComponent(url) +
+            '&amp;client_id=' + encodeURIComponent(key), function(res) {
+            var loc = res.headers.location;
+            https.get(loc, function(ress) {
+                if(typeof errors[res.statusCode] != 'undefined') {
+                    this.emit('error', new Error(errors[res.statusCode], res.statusCode));
+                    return;
+                }
+                var result = '';
+                ress.on('data', function(chunk) {
+                    result += chunk;
+                });
+                ress.on('end', function() {
+                    var data = JSON.parse(result);
+                    data.tracks.forEach(function(track) {
+                        var sc = new SoundcloudAudio(track.permalink_url, key);
+                        sc.loadResponse(track);
+                        this.tracks.push(sc);
+                    }.bind(this));
+                    this.emit('update');
+                }.bind(this));
+            }.bind(this));
+        }.bind(this));
+    }
+
+    shuffle() {
+        this.shuffleArray(this.tracks);
+    }
+
+    getNextSong() {
+        if(this.tracks.length == 0) return null;
+        this.lastIndex++;
+        if(this.lastIndex &gt;= this.tracks.length) {
+            this.lastIndex = 0;
+        }
+        return this.tracks[this.lastIndex];
+    }
+
+    hasNextSong() {
+        return this.lastIndex &lt; this.tracks.length;
+    }
+
+    getLength() {
+        return this.tracks.length;
+    }
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord-dj.StreamAudio" id="apidoc.element.discord-dj.StreamAudio">
+        function <span class="apidocSignatureSpan">discord-dj.</span>StreamAudio
+        <span class="apidocSignatureSpan">(url, user, title)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class StreamAudio extends Playable {
+
+    constructor(url, user, title) {
+        super(user);
+        this.url = url;
+        this.title = title === undefined ? null : title;
+    }
+
+    loadData() {
+        if(typeof this.url == 'string') {
+            this.url = url_parser.parse(this.url);
+        }
+        if(this.title == null) {
+            this.title = this.url.href;
+            this.emit('data-changed');
+        }
+    }
+
+    getTitle() {
+        return this.title;
+    }
+
+    getAdditionalInfo() {
+        return null;
+    }
+
+    createStream() {
+        return new Promise(function(resolve, reject) {
+            this.loadData();
+
+            if(this.url.protocol.length &gt; 5 &amp;&amp; this.url.protocol.substring(0, 5) == 'https') {
+                https.get(this.url, function(res) {
+                    resolve(res);
+                }).on('error', reject);
+            } else {
+                http.get(this.url, function(res) {
+                    resolve(res);
+                }).on('error', reject);
+            }
+        }.bind(this));
+    }
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord-dj.YoutubePlaylist" id="apidoc.element.discord-dj.YoutubePlaylist">
+        function <span class="apidocSignatureSpan">discord-dj.</span>YoutubePlaylist
+        <span class="apidocSignatureSpan">(url, key)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class YoutubePlaylist extends Playlist {
+
+    constructor(url, key) {
+        super();
+        this.lastIndex = -1;
+        this.key = key;
+        this.id = Utils.YTPlaylistRegex.exec(url);
+        if(this.id == null) throw new Error("Invalid Playlist URL");
+        this.id = this.id[1];
+        this.videos = [];
+        this.loadPage(null);
+    }
+
+    loadPage(token) {
+        var url = 'https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&amp;maxResults=50';
+        url += '&amp;playlistId=' + this.id + '&amp;key=' + this.key;
+        if(token != null) url += '&amp;pageToken=' + token;
+        https.get(url, function(res) {
+            var body = '';
+            res.on('data', function(d) {
+                body += d;
+            });
+            res.on('end', function() {
+                var parsed = JSON.parse(body);
+                if(typeof parsed.error != 'undefined') {
+                    this.emit('error', new Error(parsed.error.message));
+                    return;
+                }
+                parsed.items.forEach(function(item) {
+                    this.videos.push(item.contentDetails.videoId);
+                }.bind(this));
+                this.emit('update');
+                if(typeof parsed.nextPageToken == 'string') {
+                    this.loadPage(parsed.nextPageToken);
+                }
+            }.bind(this));
+        }.bind(this)).on('error', function(error) {
+            this.emit('error', error);
+        });
+    }
+
+    shuffle() {
+        this.shuffleArray(this.videos);
+    }
+
+    getNextSong() {
+        if(this.videos.length == 0) return null;
+        this.lastIndex++;
+        if(this.lastIndex &gt;= this.videos.length) {
+            this.lastIndex = 0;
+        }
+        return new YoutubeVideo('http://www.youtube.com/watch?v=' + this.videos[this.lastIndex]);
+    }
+
+    hasNextSong() {
+        return this.lastIndex &lt; this.videos.length;
+    }
+
+    getLength() {
+        return this.videos.length;
+    }
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord-dj.YoutubeVideo" id="apidoc.element.discord-dj.YoutubeVideo">
+        function <span class="apidocSignatureSpan">discord-dj.</span>YoutubeVideo
+        <span class="apidocSignatureSpan">(video, user)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class YoutubeVideo extends Playable {
+
+    constructor(video, user) {
+        super(user);
+
+        if(!Utils.YTRegex.test(video)) {
+            throw new Error('Invalid URL');
+        }
+
+        this.video = video.replace("https://", "http://"); // YTDL does not recognizes https :(
+
+        this.title = this.video;
+        this.url = null;
+        this.dataLoaded = false;
+    }
+
+    loadData() {
+        if(this.dataLoaded) return;
+        youtube.getInfo(this.video, function(error, info) {
+            if(error != null) {
+                console.log('Could not load information from a Youtube video: ' + error);
+            } else {
+                this.title = info.title;
+                this.url = info.loaderUrl;
+                this.dataLoaded = true;
+                this.emit('data-changed');
+            }
+        }.bind(this));
+    }
+
+    getTitle() {
+        return this.title;
+    }
+
+    getAdditionalInfo() {
+        return '`' + this.url + '`';
+    }
+
+    filterVideo(format) {
+        return format.container === 'mp4';
+    }
+
+    createStream() {
+        // Using a new instance of Promise instead of Promise.resolve to catch ytdl-core's crashes
+        return new Promise(function(resolve, reject) {
+            resolve(youtube(this.video, {filter: this.filterVideo, quality: 'lowest'}));
+        }.bind(this));
+    }
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord-dj.getDecoders" id="apidoc.element.discord-dj.getDecoders">
+        function <span class="apidocSignatureSpan">discord-dj.</span>getDecoders
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getDecoders() {
+    if(typeof global.decoders == 'undefined') {
+        return [];
+    }
+    global.decoders.sort(function(decoder1, decoder2) {
+        return decoder1.getPriority() - decoder2.getPriority();
+    });
+
+    return global.decoders;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord-dj.registerDecoder" id="apidoc.element.discord-dj.registerDecoder">
+        function <span class="apidocSignatureSpan">discord-dj.</span>registerDecoder
+        <span class="apidocSignatureSpan">(decoder)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">registerDecoder(decoder) {
+    if(typeof global.decoders == 'undefined') {
+        global.decoders = [];
+    }
+    global.decoders.push(decoder);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+function install(shouldLogin, callback) {
+    require('./Installer.js')(bot, config, shouldLogin, callback);
+    configModified = true;
+}
+
+function initDecoders() {
+    if(!Utils.exists(config['decoder-path'])) {
+        Utils.<span class="apidocCodeKeywordSpan">registerDecoder</span>(new DiscordDJ.FFmpegDecoder(null));
+    } else {
+        Utils.registerDecoder(new DiscordDJ.FFmpegDecoder(config['decoder-path']));
+    }
+    Utils.registerDecoder(new DiscordDJ.ChiptuneDecoder());
+}
+
+function connect() {
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.discord-dj.Special" id="apidoc.module.discord-dj.Special">module discord-dj.Special</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.discord-dj.Special.checkUpdate" id="apidoc.element.discord-dj.Special.checkUpdate">
+        function <span class="apidocSignatureSpan">discord-dj.Special.</span>checkUpdate
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function checkUpdate() {
+    if(version == null) {
+        console.log('Could not read version info.');
+        return;
+    }
+    var url = 'https://raw.githubusercontent.com/Guichaguri/DiscordDJ/master/package.json';
+    https.get(url, function(res) {
+        var result = '';
+        res.on('data', function(chunk) {
+            result += chunk;
+        });
+        res.on('end', function() {
+            var data = JSON.parse(result);
+            if(data.version != version) {
+                console.log('New update available!');
+                console.log('DiscordDJ v' + data.version);
+                console.log('http://guichaguri.github.io/DiscordDJ/');
+                updateAvailable = data.version;
+            }
+        });
+    }).on('error', function(e) {
+        console.log('Could not check for updates: ' + e);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+config['commands']['prefixes'] = config['commands']['prefixes'] || ['!', '
+;/'];
+
+config['commands']['prefixes'].forEach(function(prefix) {
+    manager.handler.addCommandPrefix(prefix);
+});
+
+Special.<span class="apidocCodeKeywordSpan">checkUpdate</span>();
+Special.registerCommands(manager.handler);
+}
+
+function handleDisconnection() {
+var time;
+if(connected) {
+    console.log('The bot has disconnected');
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord-dj.Special.registerCommands" id="apidoc.element.discord-dj.Special.registerCommands">
+        function <span class="apidocSignatureSpan">discord-dj.Special.</span>registerCommands
+        <span class="apidocSignatureSpan">(handler)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function registerCommands(handler) {
+    handler.registerCommand('info', ['info', 'information', 'about'], info, null);
+    handler.registerCommand('shutdown', ['shutdown'], shutdown, handler.permissions.MANAGE_PERMISSIONS);
+    handler.registerCommand('restart', ['restart', 'reload'], restart, handler.permissions.MANAGE_PERMISSIONS);
+    handler.registerCommand('skipall', ['skipall'], skipAll, handler.permissions.MANAGE_PERMISSIONS);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+config['commands']['prefixes'] = config['commands']['prefixes'] || ['!', '
+;/'];
+
+config['commands']['prefixes'].forEach(function(prefix) {
+    manager.handler.addCommandPrefix(prefix);
+});
+
+Special.checkUpdate();
+Special.<span class="apidocCodeKeywordSpan">registerCommands</span>(manager.handler);
+}
+
+function handleDisconnection() {
+var time;
+if(connected) {
+    console.log('The bot has disconnected');
+    console.log('Trying to reconnect in 10 seconds...');
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
